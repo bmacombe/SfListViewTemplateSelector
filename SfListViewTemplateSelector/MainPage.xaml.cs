@@ -18,18 +18,27 @@
 		{
 			for (int i = 0; i < 100; i++)
 			{
-				Items.Add(100.ToString());
+				Items.Add(i);
 			}
 		}
 
-		public List<string> Items { get; } = new();
+		public List<int> Items { get; } = new();
 	}
 
 	public class Selector : DataTemplateSelector
 	{
 		protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
 		{
-			return new DataTemplate(() => new Label() { Text = "Hi"});
+			var i = (int)item;
+			
+			if (i % 2 == 0)
+			{
+				return new DataTemplate(typeof(Template1));
+			}
+			else
+			{
+				return new DataTemplate(typeof(Template2));
+			}
 		}
 	}
 }
