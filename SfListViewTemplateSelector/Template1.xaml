@@ -2,11 +2,12 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SfListViewTemplateSelector.Template1">
-	<Border Stroke="Red">
+	<Border Style="{StaticResource StandardCardBorder}" WidthRequest="350">
 		<VerticalStackLayout>
 			<Label
-				Text="Welcome to .NET MAUI!"
+				Text="Template 1"
 				VerticalOptions="Center"
 				HorizontalOptions="Center" />
-		</VerticalStackLayout></Border>
+		</VerticalStackLayout>
+	</Border>
 </ContentView>

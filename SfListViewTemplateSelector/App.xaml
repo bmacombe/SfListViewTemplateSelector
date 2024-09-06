@@ -9,6 +9,20 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
+
+	        <Color x:Key="ColorMainSubBackground">#3e3e42</Color>
+	        <Color x:Key="ColorMainOutline">#686868</Color>
+
+			<Style x:Key="StandardCardBorder" TargetType="Border">
+		        <Setter Property="Stroke" Value="{StaticResource ColorMainOutline}"></Setter>
+		        <Setter Property="StrokeShape">
+			        <RoundRectangle CornerRadius="5"></RoundRectangle>
+		        </Setter>
+		        <Setter Property="Padding" Value="5"></Setter>
+		        <Setter Property="HorizontalOptions" Value="Start"></Setter>
+		        <Setter Property="Background" Value="{StaticResource ColorMainSubBackground}"></Setter>
+	        </Style>
+
+		</ResourceDictionary>
     </Application.Resources>
 </Application>
