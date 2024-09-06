@@ -10,7 +10,7 @@
 			<sfListViewTemplateSelector:Selector x:Key="ItemSelector"></sfListViewTemplateSelector:Selector>
 		</ResourceDictionary>
 	</ContentPage.Resources>
-	<syncfusion:SfListView Background="Red" ItemsSource="{Binding Items}" ItemTemplate="{StaticResource ItemSelector }">
+	<syncfusion:SfListView ItemsSource="{Binding Items}" ItemTemplate="{StaticResource ItemSelector }">
 
 	</syncfusion:SfListView>
 
