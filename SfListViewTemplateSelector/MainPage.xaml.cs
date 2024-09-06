@@ -72,7 +72,8 @@ namespace SfListViewTemplateSelector
 		protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
 		{
 			var g = (GroupResult)item;
-			return new DataTemplate(() => new Label() { Text = g.Key.ToString() });
+			return new DataTemplate(typeof(Header));
+			//return new DataTemplate(() => new Label() { Text = g.Key.ToString() });
 		}
 	}
 }
