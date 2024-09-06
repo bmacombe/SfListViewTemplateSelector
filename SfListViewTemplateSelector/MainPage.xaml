@@ -3,15 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              xmlns:sfListViewTemplateSelector="using:SfListViewTemplateSelector"
-             x:DataType="sfListViewTemplateSelector:ViewModel"
              x:Class="SfListViewTemplateSelector.MainPage">
 	<ContentPage.Resources>
 		<ResourceDictionary>
 			<sfListViewTemplateSelector:Selector x:Key="ItemSelector"></sfListViewTemplateSelector:Selector>
+			<sfListViewTemplateSelector:HeaderSelector x:Key="HeaderSelector"></sfListViewTemplateSelector:HeaderSelector>
 		</ResourceDictionary>
 	</ContentPage.Resources>
-	<syncfusion:SfListView x:Name="ListView" ItemsSource="{Binding Items}" ItemTemplate="{StaticResource ItemSelector }">
-
+	<syncfusion:SfListView x:Name="ListView" ItemsSource="{Binding Items}" GroupHeaderTemplate="{StaticResource HeaderSelector}" ItemTemplate="{StaticResource ItemSelector }">
+		<!--<syncfusion:SfListView.HeaderTemplate>
+			<DataTemplate>
+				<Grid BackgroundColor="LightGray">
+					<Label Text="{Binding Key}" HorizontalOptions="Center" VerticalOptions="Center" />
+				</Grid>
+			</DataTemplate>
+		</syncfusion:SfListView.HeaderTemplate>-->
 	</syncfusion:SfListView>
 
 </ContentPage>
