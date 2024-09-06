@@ -1,4 +1,6 @@
-﻿namespace SfListViewTemplateSelector
+﻿using Syncfusion.Maui.DataSource;
+
+namespace SfListViewTemplateSelector
 {
 	public partial class MainPage : ContentPage
 	{
@@ -7,8 +9,17 @@
 			InitializeComponent();
 
 			BindingContext = new ViewModel();
+
+			//ListView.DataSource.GroupDescriptors.Add(new GroupDescriptor()
+			//{
+			//	PropertyName = "Type",
+			//	KeySelector = o =>
+			//	{
+			//		return "Group";
+			//	}
+			//});
 		}
-		
+
 	}
 
 	public class ViewModel
