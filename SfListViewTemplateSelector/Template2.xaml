@@ -2,12 +2,12 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SfListViewTemplateSelector.Template2">
-	<Border Style="{StaticResource StandardCardBorder}" WidthRequest="350">
+	<Grid WidthRequest="350">
 		<VerticalStackLayout>
 			<Label
 				Text="Template 2"
 				VerticalOptions="Center"
 				HorizontalOptions="Center" />
 		</VerticalStackLayout>
-	</Border>
+	</Grid>
 </ContentView>
